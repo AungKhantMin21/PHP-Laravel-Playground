@@ -59,5 +59,4 @@ echo $savings->showBalanceWithInterest(); // Accessing protected method through 
 // echo $savings->balance;         // Error: Cannot access protected property
 // echo $savings->pin;             // Error: Cannot access private property
 // echo $savings->calculateInterest(); // Error: Cannot access protected method
-
 ?>
