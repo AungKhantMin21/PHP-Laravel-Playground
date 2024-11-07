@@ -5,7 +5,7 @@ require "./Book.php";
 class Member {
 
     public function __construct(
-        private $name, private $memberId, private $joinDate, private $expireDate, private $membership = "Normal"
+        public $name, public $memberId, public $joinDate, public $expireDate, public $membership = "Normal"
         ){}
 
     public function isMembershipActive(){
@@ -24,7 +24,7 @@ class Member {
             echo "$this->name borrows $book->title";
             return;
         } else {
-            echo "$book->title is not avaliable at this moment";
+            echo "$book->title is not available at this moment";
         }
 
     }

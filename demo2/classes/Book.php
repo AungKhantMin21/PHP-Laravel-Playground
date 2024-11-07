@@ -2,29 +2,29 @@
 
 class Book {
 
-    public function __construct(protected $title,protected $author, protected $avaliable){}
+    public function __construct(public $title,public $author, public $available){}
 
 
-    public function isAvaliable(){
-        return $this->avaliable;
+    public function isAvailable(){
+        return $this->available;
     }
 
     public function getDetails(){
         $book = [
             "title" => $this->title,
             "author" => $this->author,
-            "available" => $this->avaliable
+            "available" => $this->available
         ];
         return $book;
     }
 
-    public function setAvaliable($status){
-        $this->avaliable = $status;
+    public function setAvailable($status){
+        $this->available = $status;
 
         if($status == true){
-            echo "$this->title is set to avaliable status";
+            echo "$this->title is set to available status";
         } else {
-            echo "$this->title is set to not avaliable status.";
+            echo "$this->title is set to not available status.";
         }
     }
 
