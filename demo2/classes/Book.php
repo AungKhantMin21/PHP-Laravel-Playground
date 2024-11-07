@@ -2,7 +2,7 @@
 
 class Book {
 
-    public function __construct(public $title,public $author, public $available){}
+    public function __construct(public $title,public $author, public $available,public $description, public $image){}
 
 
     public function isAvailable(){
@@ -13,7 +13,9 @@ class Book {
         $book = [
             "title" => $this->title,
             "author" => $this->author,
-            "available" => $this->available
+            "available" => $this->available,
+            "description" => $this->description,
+            "image" => $this->image
         ];
         return $book;
     }
