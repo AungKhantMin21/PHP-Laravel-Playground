@@ -5,6 +5,7 @@ class Library {
     public function __construct(public $books = [], public $members = []){}
     
     public function addBook(Book $newBook){
+
         $this->books[] = $newBook;
     }
 
@@ -15,6 +16,17 @@ class Library {
     }
 
     public function viewAvailableBooks(){
+        $availableBooks = [];
+        foreach($this->books as $book){
+            if($book->isAvailable()){
+                $availableBooks[] = $book;
+            }
+        } 
+        return $availableBooks;
+    }
+
+
+    public function viewAllBooks(){
         return $this->books;
     }
 }
